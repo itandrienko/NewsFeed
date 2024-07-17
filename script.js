@@ -23,7 +23,7 @@ const data = {
         "id": 87874,
         "lang": "ru",
         "date": "Mon Oct 11 2021 16:54:23 GMT+0300 (Moscow Standard Time)",
-        "title": "«Тинькофф банк» вошел в перечень системно значимых",
+        "title": "Тинькофф банк вошел в перечень системно значимых",
         "description": "Теперь в списке находятся 13 банков, на долю которых приходится около 77% совокупных активов российского банковского сектора.",
         "image": "https://aif-s3.aif.ru/images/025/373/49a6d3fba70e2c1b0dae8811ad3b2dc4.jpg",
         "source_id": 14,
@@ -205,10 +205,10 @@ const escapeString = (string) => {
     const symbols = {
         "&": "&amp",
         "<": "&lt",
-        ">": "&gt"
+        ">": "&gt",
     }
 
-    return string.replace(/&<>/g, (tag) => {
+    return string.replace(/[&<>]/g, (tag) => {
         return symbols[tag] || tag;
     });
 }
