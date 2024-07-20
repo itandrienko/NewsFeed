@@ -6,7 +6,8 @@
     --color-gray: #868686;
     --color-white: #FFFFFF;
 
-    --grid-columns-width: 101px;
+    --container-width: 1440px;
+    --grid-columns-width: 98px;
     --grid-gap: 20px;
 }
 
@@ -30,7 +31,7 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1435px;
+    max-width: var(--container-width);
 }
 
 .header {
@@ -206,6 +207,7 @@ body {
     padding-top: 22px;
     background-color: var(--color-primary);
     padding-bottom: 20px;
+    min-width: var(--container-width);
 }
 
 
