@@ -1,9 +1,9 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "development",
-    entry: './src/script.js',
+    mode: 'development',
+    entry: './src/script.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.[contenthash].js'
@@ -18,13 +18,20 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
         }, {
             test: /\.svg$/,
-            type: 'asset/resource',
+            type: 'asset/resource'
+        }, {
+            test: /\.(ts|tsx)$/,
+            use: 'ts-loader',
+            exclude: /node_modules/
         }]
+    },
+    resolve: {
+        extensions: ['.js', '.ts', '.tsx'],
     },
     plugins: [new HtmlWebpackPlugin({
         template: './src/index.html'
     })],
     devServer: {
-        open: true
+        open: true,
     }
 }

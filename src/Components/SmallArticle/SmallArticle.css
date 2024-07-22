@@ -2,6 +2,7 @@
     margin-bottom: 35px;
     padding-left: 11px;
     border-left: 9px solid var(--color-primary);
+    cursor: pointer;
 }
 
 .small-article:last-child {
@@ -10,8 +11,8 @@
 
 .small-article__title {
     margin-bottom: 14px;
-    font-size: 20px;
     font-weight: 700;
+    font-size: 20px;
     line-height: 24px;
     color: var(--color-primary);
     display: -webkit-box;

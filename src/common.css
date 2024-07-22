@@ -68,5 +68,6 @@ body {
 .article-img {
     background: #ccc;
     display: block;
+    width: 100%;
     object-fit: cover;
 }
